@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Falling Slug</title>
+	<script src="game.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body onload="start();">
+	<canvas id="tutorial" width="640" height="480"></canvas><br>
+	<p id="lives">Lives: </p>
+	<p id="score">Score: </p>
+	
+	<form id="settings"> <p>Extra lives: </p>
+		<input type=checkbox value=8 name=lives> 8 Lives
+		<input type=checkbox value=4 name=lives> 4 Lives
+		<input type=checkbox value=2 name=lives checked="checked"> 2 Lives
+		<input type=checkbox value=1 name=lives checked="checked"> 1 Life
+	</form>
+	
+	<p id="instructions">Use the left and right arrow keys to move the slug to fall through the rising elevators. Each time the slug falls through an elevator gap it scores a point. If the slug hits any of the red spikes it will be impaled and will lose a life. The game ends when the slug has lost all of its extra lives. Refresh the page to restart the game. You can select extra lives of the slug by marking the checkboxes, which takes effect when a new game is started. The score and number of extra lives are displayed in hexadecimal.</p>
+	
+	<ul>To Do List:
+		<li>Render screen differences instead of the whole screen (when elevators move, instead of clearing the whole screen, fill with black former elevator locations)</li>
+		<li>Implement the game using the Phasor framework</li>
+		<li>Reorganize code</li>
+		<li>Replace setTimeout() and setInterval with requestAnimationFrame()</li>
+	</ul>
+</body>
+</html>
